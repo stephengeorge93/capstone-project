@@ -79,7 +79,7 @@ This capstone project implements a complete, production-ready data pipeline to a
 ## 📸 Screenshots
 
 ### 🧭 Schema Diagram
-![Schema Overview](./images/schema.png)
+![Schema Overview](<Screenshot 2025-06-01 at 11.57.00.png>)
 
 ### 🗂 DAG Views
 - ![Ingestion DAG](<Screenshot 2025-06-02 at 02.12.22.png>)
@@ -92,7 +92,7 @@ This capstone project implements a complete, production-ready data pipeline to a
 ### 📊 Tableau Dashboard
 - [View on Tableau Public](https://public.tableau.com/authoring/capstoneproject_17488176068530/Propertydistributionmap/Dashboard%201#1)
 
-- [Tableau](<Screenshot 2025-06-02 at 02.36.45-1.png>)
+- [Tableau](<Screenshot 2025-06-02 at 02.36.45-1 copy.png>)
 
 
 ---
