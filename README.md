@@ -92,7 +92,7 @@ This capstone project implements a complete, production-ready data pipeline to a
 ### 📊 Tableau Dashboard
 - [View on Tableau Public](https://public.tableau.com/authoring/capstoneproject_17488176068530/Propertydistributionmap/Dashboard%201#1)
 
-- [Tableau](<Screenshot 2025-06-02 at 02.36.45-1 copy.png>)
+- [Tableau](<Screenshot 2025-06-02 at 02.36.45-1.png>)
 
 
 ---
