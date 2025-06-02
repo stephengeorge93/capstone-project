@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: fact_property_valuation
+    description: "Fact table containing yearly valuation and tax details for each property"
+    columns:
+      - name: PROPERTY_ID
+        description: "Unique ID of the property"
+        tests:
+          - not_null
+          - unique
+        
+      - name: VALUE_2023
+        description: "Estimated value in 2023"
+      - name: VALUE_2024
+        description: "Estimated value in 2024"
+      - name: TAX_2023
+        description: "Property tax in 2023"
+      - name: LOAD_DATE
+        description: "Ingestion timestamp"
+
+  - name: dim_property_location
+    description: "Dimension table with geographic and address-related data"
+    columns:
+      - name: PROPERTY_ID
+        tests:
+          - not_null
+          - unique
+          
+      - name: CITY
+        description: "City where the property is located"
+      - name: ZIP_CODE
+        description: "Postal code"
+
+  - name: dim_property_structure
+    description: "Dimension table with physical and architectural attributes of the property"
+    columns:
+      - name: PROPERTY_ID
+        tests:
+          - not_null
+          - unique
+          
+      - name: BEDROOMS
+        description: "Number of bedrooms"
+      - name: BATHROOMS
+        description: "Number of bathrooms"
+
+  - name: dim_owner
+    description: "Dimension table with ownership and owner contact info"
+    columns:
+      - name: PROPERTY_ID
+        tests:
+          - not_null
+          - unique
+      
+      - name: OWNER_TYPE
+        description: "Ownership type (Individual, LLC, etc.)"
+      - name: OWNER_NAMES
+        description: "Full name(s) of the owner(s)"
+  - name: report_property_insights
+    description: "Insight-ready mart joining all relevant property and ownership data"
+    columns:
+      - name: PROPERTY_ID
+        tests: [not_null]
+      - name: value_growth_pct
+        description: "Growth from 2023 to 2024"
+  
+

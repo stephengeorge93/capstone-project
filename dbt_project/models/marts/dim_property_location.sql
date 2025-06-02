@@ -1,0 +1,12 @@
+SELECT
+    PROPERTY_ID,
+    FORMATTED_ADDRESS,
+    ADDRESS_LINE_1,
+    CITY,
+    STATE,
+    ZIP_CODE,
+    COUNTY,
+    LATITUDE,
+    LONGITUDE,
+    SUBDIVISION
+FROM {{ ref('stg_property_data') }}

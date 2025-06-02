@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: rentcast
+    database: dataexpert_student
+    schema: stephengeorge93
+    tables:
+      - name: rentcast_properties
+        description: "Raw property data from RentCast API"
+        loaded_at_field: LOAD_DATE
+        freshness:
+          warn_after:
+            count: 1
+            period: day
+          error_after:
+            count: 3
+            period: day
+        columns:
+          - name: PROPERTY_ID
+            description: "Unique identifier for the property"
+            tests:
+              - not_null
+              - unique
+          - name: LOAD_DATE
+            description: "Date when the data was loaded"
